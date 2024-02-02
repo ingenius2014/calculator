@@ -49,7 +49,7 @@ public class ClientService {
                     launchCalculatedPriceForProfessional(professionalClient, consumptionClient, energyType, unit);
             case ParticularClient particularClient ->
                     launchCalculatedPriceForParticular(particularClient, consumptionClient, energyType, unit);
-            default -> null;
+            default -> throw new IllegalStateException("Unexpected value: " + client);
         };
     }
 
